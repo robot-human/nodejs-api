@@ -15,6 +15,9 @@ app.use(morgan('dev'));
 const homeRoutes = require("./routes/index");
 app.use(homeRoutes);
 
+const loginRoutes = require("./routes/loginRoutes");
+app.use(loginRoutes);
+
 app.listen(app.get('port'), () => {
     console.log(`Server listening to port ${app.get('port')}`);
 });
